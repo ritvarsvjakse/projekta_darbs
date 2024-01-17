@@ -41,10 +41,10 @@ meklet.click()
 time.sleep(5)
 
 # Atlasa pēdējos 15 sludinājumus
-post_rows = driver.find_elements(
+rows = driver.find_elements(
     By.XPATH, "//tr[contains(@id, 'tr_')]")[:15]
 sludinajumi = []
-for row in post_rows:
+for row in rows:
     iela = row.find_element(
         By.XPATH, ".//td[contains(@class, 'msga2-o')][1]/a").text
 
